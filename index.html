@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Work</title>
+
+    <!-- fontawesome cdn -->
+    <script src="https://kit.fontawesome.com/51d768ed59.js" crossorigin="anonymous"></script>
+
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./assets/asset 9.png">
+
+
+
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-20 flex items-center justify-between p-3 bg-white shadow-md">
+
+        <a href="" id="brand" class="flex items-center flex-1 gap-2">
+            <img src="./assets/goku-logo.png" alt="" class="object-cover max-w-12 max-h-12">
+            <span class="text-xl font-semibold font-poppins">Quantum</span>
+        </a>
+
+        <div id="nav-menu" class="hidden gap-12 lg:flex">
+            <a href=""
+                class="font-bold text-gray-700 hover:text-[#ff004f] transition-colors duration-500 ease-in-out ">Home</a>
+            <a href=""
+                class="font-bold text-gray-700 hover:text-[#ff004f] transition-colors duration-500 ease-in-out">About</a>
+            <a href=""
+                class="font-bold text-gray-700 hover:text-[#ff004f] transition-colors duration-500 ease-in-out">Logs</a>
+            <a href=""
+                class="font-bold text-gray-700 hover:text-[#ff004f] transition-colors duration-500 ease-in-out">Pricing</a>
+            <a href=""
+                class="font-bold text-gray-700 hover:text-[#ff004f] transition-colors duration-500 ease-in-out">Login</a>
+        </div>
+
+        <div class="justify-end flex-1 hidden lg:flex">
+            <button
+                class="flex items-center gap-2 px-6 py-2 border border-gray-400 rounded-lg border-1 hover:border-gray-800 ">
+                <i class="text-2xl text-pink-600 fa-sharp fa-solid fa-meteor " style="font-size: 21px;"></i>
+                <span> DragonBall Super</span>
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+        </div>
+
+
+        <button class="p-2 lg:hidden" onclick="handleMenu()">
+            <i class="text-gray-600 fa-solid fa-bars"></i>
+        </button>
+
+
+        <div id="nav-dialog" class="fixed inset-0 z-10 hidden p-3 transition-transform duration-500 bg-white lg:hidden">
+
+            <div id="nav-bar" class="flex justify-between ">
+
+                <a href="" id="brand" class="flex items-center flex-1 gap-2">
+                    <img src="./assets/asset 0.png" alt="" class="object-cover max-w-12 max-h-12">
+                    <span class="text-xl font-semibold font-poppins">Quantum</span>
+                </a>
+
+
+
+                <button class="p-2 lg:hidden" onclick="handleMenu()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+
+            <div class="mt-6 transition-transform duration-75">
+                <a href=""
+                    class="block p-3 m-3 font-bold text-gray-600 rounded-lg hover:text-[#ff004f] transition-colors duration-500 ease-in-out">Home</a>
+                <a href=""
+                    class="block p-3 m-3 font-bold text-gray-600 rounded-lg hover:text-[#ff004f] transition-colors duration-500 ease-in-out">About</a>
+                <a href=""
+                    class="block p-3 m-3 font-bold text-gray-600 rounded-lg hover:text-[#ff004f] transition-colors duration-500 ease-in-out">Logs</a>
+                <a href=""
+                    class="block p-3 m-3 font-bold text-gray-600 rounded-lg hover:text-[#ff004f] transition-colors duration-500 ease-in-out">Pricing</a>
+                <a href=""
+                    class="block p-3 m-3 font-bold text-gray-600 rounded-lg hover:text-[#ff004f] transition-colors duration-500 ease-in-out">Login</a>
+            </div>
+
+            <div class="h-1 bg-gray-100">
+
+            </div>
+
+
+
+            <button
+                class="flex items-center w-full gap-2 px-6 py-4 mt-6 rounded-lg border-1 hover:border-gray-800 hover:bg-gray-100">
+                <i class="text-2xl text-pink-600 fa-sharp fa-solid fa-meteor" style="font-size: 21px;"></i>
+                <span> DragonBall Super</span>
+                <!-- <i class="fa-solid fa-arrow-right"></i> -->
+
+            </button>
+        </div>
+
+    </nav>
+
+
+    <!-- main -->
+
+    <main class="mt-16">
+        <!-- hero section -->
+
+        <div id="hero" class="min-h-screen bg-gradient-to-b from-purple-50 via-orange-50 to-transparent">
+
+
+            <div id="hero-container"
+                class="flex flex-col max-w-4xl px-6 pt-6 pb-32 mx-auto sm:items-center sm:text-center">
+
+                <div id="version-text"
+                    class="flex items-center gap-2 px-3 py-1 my-6 transition border border-pink-300 rounded-lg shadow-md bg-pink-50 w-fit hover:shadow-lg hover:-translate-y-1 group">
+
+                    <div class="w-2 h-2 bg-pink-400 border border-pink-600 rounded-full"></div>
+
+                    <p class="font-medium text-pink-900 font-montserrat">v0.21: <span class="text-pink-900">Lorem ipsum
+                            dolor sit amet</span></p>
+
+                    <i
+                        class="text-pink-600 transition duration-150 fa-solid fa-arrow-right group-hover:translate-x-1"></i>
+                </div>
+
+                <div id="hero-features" class="hidden gap-8 my-6 sm:flex">
+                    <div class="flex items-center justify-center gap-2 text-gray-500">
+                        <i class="text-pink-600 fas fa-laptop-code"></i>
+                        <p>Visual Editor</p>
+                    </div>
+                    <div class="flex items-center justify-center gap-2 text-gray-500">
+                        <i class="text-pink-600 fas fa-edit"></i>
+                        <p>Easy Content Creation</p>
+                    </div>
+                    <div class="flex items-center justify-center gap-2 text-gray-500">
+                        <i class="text-pink-600 fas fa-globe"></i>
+                        <p>Intuitive Interface</p>
+                    </div>
+                </div>
+
+
+
+                <h1 class="mt-4 text-4xl leading-snug sm:text-7xl sm:leading-snug lnht">
+                    Ancient ruins under the starry sky
+                </h1>
+                <p class="mt-4 text-xl text-gray-800 sm:text-2xl sm:mt-8">Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Proin malesuada lacus at erat vehicula, eget .</p>
+
+
+                <div id="button-container" class="flex flex-col gap-4 mt-12 sm:flex-row">
+                    <button
+                        class="transition-colors duration-200 ease-in-out px-8 py-3 font-semibold text-white rounded-lg shadow-sm bg-[#ff004f] hover:bg-opacity-80">
+                        Download now
+                    </button>
+                    <button
+                        class="px-8 py-3 font-semibold transition-colors duration-200 ease-in-out bg-white border border-gray-400 rounded-lg hover:border-gray-800">
+                        Find it more
+                    </button>
+                </div>
+
+            </div>
+
+            <div id="companies-container" class="flex flex-col gap-8">
+                <div id="companies-title" class="flex items-center justify-center gap-3">
+                    <img class="translate-y-2" src="./assets/asset 2.svg" alt="">
+                    <span class="font-medium"> APPS BUILT WITH QUANTUM </span>
+                    <img class="translate-y-2 -scale-x-100" src="./assets/asset 2.svg" alt="">
+                </div>
+
+
+                <div id="companies-lines-group" class="flex flex-col gap-4">
+                    <div id="line1" class="flex w-screen gap-4 transition-transform ease-linear -translate-x-48">
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 md:min-h-32 md:min-w-32 min-w-24 min-h-24 rounded-xl">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/1.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold ">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 flex-co l min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/2.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/3.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/4.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/5.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/6.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/7.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/8.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/9.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/10.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/11.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/12.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                    </div>
+                    <div id="line2" class="flex w-screen gap-4 transition-transform ease-linear translate-x-10">
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 md:min-h-32 md:min-w-32 min-w-24 min-h-24 rounded-xl">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/13.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold ">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 flex-co l min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/14.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/15.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/16.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/17.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/18.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/19.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/20.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/21.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/22.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/23.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/24.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+
+                    </div>
+                    <div id="line3"
+                        class="flex w-screen gap-4 transition-transform ease-linear -translate-x-48 md:hidden">
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 md:min-h-32 md:min-w-32 min-w-24 min-h-24 rounded-xl">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/25.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold ">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 flex-co l min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/26.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/27.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/28.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/29.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/30.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/31.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/32.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/33.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/34.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/35.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center bg-white border border-gray-300 min-w-24 min-h-24 rounded-xl md:min-h-32 md:min-w-32">
+                            <img class="w-12 h-12 md:w-16 md:h-16" src="./assets/36.svg" alt="">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- step by step -->
+
+        <div id="steps" class="flex flex-col gap-6 px-6 py-12 mx-auto mt-16 lg:px-8 max-w-7xl lg:mt-32">
+
+
+            <h2 class="text-5xl font-poppins sm:font-semibold mb-14">
+                How it <span class="text-[#ff004f]">works</span>
+            </h2>
+
+
+            <div id="step1" class="flex flex-col items-center justify-between px-8 py-12 border rounded-xl lg:flex-row">
+
+
+                <div class="flex flex-col gap-6 lg:w-1/2">
+
+                    <span
+                        class="px-3 py-1 font-medium text-pink-800 border border-pink-400 rounded-lg bg-pink-50 w-fit font-poppins">
+                        Step1
+                    </span>
+
+                    <h3 class="text-4xl font-semibold">Discover the secrets of the ancient ruins</h3>
+                    <p class="text-lg font-light text-gray-500">Lorem ipsum dolor sit amet. Consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                    <ul class="grid grid-cols-2 gap-2">
+
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-check"></i>
+
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80 "
+                                href="">Multiple windows</a>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-check"></i>
+
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">Menubar/tray menus</a>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-check"></i>
+
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">Offline support</a>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-check"></i>
+
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">
+                                Customisable menus</a>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-check"></i>
+
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">Launch on startup</a>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-check"></i>
+
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">Tabs</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="pt-12 ">
+                    <img src="./assets/asset 66.svg" alt="">
+                </div>
+
+            </div>
+            <div id="step2" class="flex flex-col items-center justify-between px-8 py-12 border rounded-xl lg:flex-row">
+
+
+                <div class="flex flex-col gap-6 lg:w-1/2">
+
+                    <span
+                        class="px-3 py-1 font-medium text-pink-800 border border-pink-400 rounded-lg bg-pink-50 w-fit font-poppins">Step2</span>
+
+                    <h3 class="text-4xl font-semibold">Discover ancient ruins illuminated by the moonlight.</h3>
+                    <p class="text-lg font-light text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Fusce commodo ligula, nec luctus turpis, posuere gravida arcu.</p>
+
+                    <ul class="grid grid-cols-2 gap-2">
+
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-check"></i>
+
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">Native notifications</a>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-check"></i>
+
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">Application menu</a>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-check"></i>
+
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">Dock/Icon</a>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-check"></i>
+
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">File system access</a>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-check"></i>
+
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">
+                                Global keyboard shortcuts</a>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-check"></i>
+
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">Context menu</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="pt-12 ">
+                    <img src="./assets/asset 66.svg" alt="">
+                </div>
+
+            </div>
+            <div id="step3" class="flex flex-col items-center justify-between px-8 py-12 border rounded-xl lg:flex-row">
+
+
+                <div class="flex flex-col gap-6 lg:w-1/2">
+
+                    <span
+                        class="px-3 py-1 font-medium text-pink-800 border border-pink-400 rounded-lg bg-pink-50 w-fit font-poppins">Step3</span>
+
+                    <h3 class="text-4xl font-semibold">Find peace in ruins under a cosmic night sky.</h3>
+                    <p class="text-lg font-light text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Fusce commodo ligula, nec luctus turpis, posuere gravida arcu.</p>
+
+                    <ul class="grid grid-cols-2 gap-2">
+
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-check"></i>
+
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">Super-fast global CDN</a>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-check"></i>
+
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">Magic universal links</a>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-check"></i>
+
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">Manage version numbers</a>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-check"></i>
+
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">Download analytics</a>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-check"></i>
+
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">Download links</a>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-check"></i>
+
+                            <a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                                href="">Native installers</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="pt-12 ">
+                    <img src="./assets/asset 66.svg" alt="">
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+
+        <!-- Bento grid system -->
+
+        <!-- <div id="bento-grid" class="px-6 py-12 mx-auto max-w-7xl lg:px-8 lg:mt-32">
+
+            <h2 class="text-5xl font-poppins sm:font-semibold mb-14">ToFrozed handles
+                the details</h2>
+
+                <div id="grid-container" class="grid grid-cols-1 gap-6 lg:grid-cols-3">
+
+                        <div class="p-[1px] hover:bg-gradient-to-br bg-slate-100  rounded-2xl hover:from-red-200 hover:via-purple-200 to hover:bg-yellow-200">
+
+                            <div class="flex flex-col items-center w-full h-full gap-6 p-6 bg-white rounded-2xl hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 to hover:bg-yellow-50">
+                                
+                                <h3 class="text-2xl font-medium">Native Notifications</h3>
+
+                                <img src="./assets/asset 37.png" alt="">
+
+
+                                
+                            </div>
+                            
+                        </div>
+                        <div class="group p-[1px] hover:bg-gradient-to-br bg-slate-100  rounded-2xl hover:from-red-200 hover:via-purple-200 to hover:bg-yellow-200">
+
+                            <div class="flex flex-col items-center w-full h-full gap-6 p-6 bg-white rounded-2xl hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 to hover:bg-yellow-50">
+                                
+                                <h3 class="text-2xl font-medium">Native Notifications</h3>
+
+                                <p class="text-lg font-light text-center">We’ll ensure the underlying browser is up to date and deliver performance improvements, security patches, & additional features.</p>
+
+                                <img src="./assets/asset 37.png" alt="">
+
+
+                                
+                            </div>
+                            
+                        </div>
+                        <div class="group p-[1px] hover:bg-gradient-to-br bg-slate-100  rounded-2xl hover:from-red-200 hover:via-purple-200 to hover:bg-yellow-200">
+
+                            <div class="flex flex-col items-center w-full h-full gap-6 p-6 bg-white rounded-2xl hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 to hover:bg-yellow-50">
+                                
+                                <h3 class="text-2xl font-medium">Native Notifications</h3>
+
+                                <img src="./assets/asset 37.png" alt="">
+
+
+                                
+                            </div>
+                            
+                        </div>
+                        <div class="group p-[1px] hover:bg-gradient-to-br bg-slate-100  rounded-2xl hover:from-red-200 hover:via-purple-200 to hover:bg-yellow-200">
+
+                            <div class="flex flex-col items-center w-full h-full gap-6 p-6 bg-white rounded-2xl hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 to hover:bg-yellow-50">
+                                
+                                <h3 class="text-2xl font-medium">Native Notifications</h3>
+                                <p class="text-lg font-light text-center">ToDesktop ensures the underlying browser, performance improvements, security patches and additional features are always up to date.</p>
+
+
+                                <img src="./assets/asset 37.png" alt="">
+
+
+                                
+                            </div>
+                            
+                        </div>
+                        <div class="group p-[1px] hover:bg-gradient-to-br bg-slate-100  rounded-2xl hover:from-red-200 hover:via-purple-200 to hover:bg-yellow-200">
+
+                            <div class="flex flex-col items-center w-full h-full gap-6 p-6 bg-white rounded-2xl hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 to hover:bg-yellow-50">
+                                
+                                <h3 class="text-2xl font-medium">Native Notifications</h3>
+
+                                <img src="./assets/asset 37.png" alt="">
+
+
+                                
+                            </div>
+                            
+                        </div>
+                        <div class="group p-[1px] hover:bg-gradient-to-br bg-slate-100  rounded-2xl hover:from-red-200 hover:via-purple-200 to hover:bg-yellow-200">
+
+                            <div class="flex flex-col items-center w-full h-full gap-6 p-6 bg-white rounded-2xl hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 to hover:bg-yellow-50">
+                                
+                                <h3 class="text-2xl font-medium">Native Notifications</h3>
+                                <p class="text-lg font-light text-center">We even provide a magic link which will detect your users operating system & download the most up to date version of your app.</p>
+
+
+                                <img src="./assets/asset 37.png" alt="">
+
+
+                                
+                            </div>
+                            
+                        </div>
+                    
+                    
+                </div>
+
+
+        </div> -->
+
+
+        <!-- bento-grid section -->
+
+
+        <div id="bento-grid" class="px-6 py-12 mx-auto max-w-7xl lg:px-8 lg:mt-32">
+            <h2 class="text-5xl font-poppins sm:font-semibold mb-14">
+                How Quantum<span class="text-[#ff004f]"> Handles it</span>
+            </h2>
+            
+            <div id="grid-container" class="flex flex-col gap-6 lg:grid lg:grid-cols-3" style="grid-auto-rows: 96px;">
+                <div
+                    class="p-[1px] hover:bg-gradient-to-br bg-slate-200 rounded-2xl hover:from-red-200 hover:via-purple-200 to hover:bg-yellow-200 row-start-1 row-end-3">
+                    <div
+                        class="flex flex-col items-center w-full h-full gap-6 p-6 bg-slate-50 rounded-2xl hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 to hover:bg-yellow-50">
+                        <h3 class="text-2xl font-semibold">Native Notifications</h3>
+                        <img src="./assets/asset 37.png" alt="">
+                    </div>
+                </div>
+                <div
+                    class="p-[1px] hover:bg-gradient-to-br bg-slate-100 rounded-2xl hover:from-red-200 hover:via-purple-200 to hover:bg-yellow-200 row-start-1 row-end-4">
+                    <div
+                        class="flex flex-col items-center w-full h-full gap-6 p-6 bg-slate-50 rounded-2xl hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 to hover:bg-yellow-50">
+                        <h3 class="text-2xl font-semibold">Auto Updates</h3>
+                        <p class="text-lg font-light text-center">"Eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco consequat."</p>
+                        <img src="./assets/asset 38.png" alt="">
+                    </div>
+                </div>
+                <div
+                    class="p-[1px] hover:bg-gradient-to-br bg-slate-100 rounded-2xl hover:from-red-200 hover:via-purple-200 to hover:bg-yellow-200 row-start-1 row-end-3">
+                    <div
+                        class="flex flex-col items-center w-full h-full gap-6 p-6 bg-slate-50 rounded-2xl hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 to hover:bg-yellow-50">
+                        <h3 class="text-2xl font-semibold">Plugins
+                        </h3>
+                        <img src="./assets/asset 39.png" alt="">
+                    </div>
+                </div>
+                <div
+                    class="p-[1px] hover:bg-gradient-to-br bg-slate-100 rounded-2xl hover:from-red-200 hover:via-purple-200 to hover:bg-yellow-200 row-start-3 row-end-6">
+                    <div
+                        class="flex flex-col items-center w-full h-full gap-6 p-6 bg-slate-50 rounded-2xl hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 to hover:bg-yellow-50">
+                        <h3 class="text-2xl font-semibold">Access to Native APIs</h3>
+                        <p class="text-lg font-light text-center">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                            veniam.</p>
+                        <img src="./assets/asset 39.png" alt="">
+                    </div>
+                </div>
+                <div
+                    class="p-[1px] hover:bg-gradient-to-br bg-slate-100 rounded-2xl hover:from-red-200 hover:via-purple-200 to hover:bg-yellow-200 row-start-4 row-end-6">
+                    <div
+                        class="flex flex-col items-center w-full h-full gap-6 p-6 bg-slate-50 rounded-2xl hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 to hover:bg-yellow-50">
+                        <h3 class="text-2xl font-semibold">Customizable look and feel</h3>
+                        <img src="./assets/asset 42.png" alt="">
+                    </div>
+                </div>
+                <div
+                    class="p-[1px] hover:bg-gradient-to-br bg-slate-100 rounded-2xl hover:from-red-200 hover:via-purple-200 to hover:bg-yellow-200 row-start-3 row-end-6">
+                    <div
+                        class="flex flex-col items-center w-full h-full gap-6 p-6 bg-slate-50 rounded-2xl hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 to hover:bg-yellow-50">
+                        <h3 class="text-2xl font-semibold ">Native Installers</h3>
+                        <p class="text-lg font-light text-center">Nobis etiam providemus magica vincula quae detegunt
+                            usores tui systema operativum et recentissimam versionem .</p>
+                        <img src="./assets/asset 43.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- companies feature line -->
+
+        <div id="companies-feature-line" class="px-6 py-8 mx-auto max-w-7xl lg:px-8 lg:mt-4">
+
+
+            <div class="flex justify-center p-3 overflow-hidden border rounded-lg ">
+
+                <div id="line4" class="flex gap-8 p-6 transition-transform ease-linear">
+                    <h3 class="mx-2 my-0 text-2xl font-semibold whitespace-nowrap">Custom menus</h3>
+                    <span class="text-2xl text-[#ff004f]">•</span>
+                    <h3 class="mx-2 my-0 text-2xl font-semibold whitespace-nowrap">
+                        Global Hotkeys</h3>
+                    <span class="text-2xl text-[#ff004f]">•</span>
+                    <h3 class="mx-2 my-0 text-2xl font-semibold whitespace-nowrap">Download Analytics
+                    </h3>
+                    <span class="text-2xl text-[#ff004f]">•</span>
+                    <h3 class="mx-2 my-0 text-2xl font-semibold whitespace-nowrap">Multi-window support </h3>
+                    <span class="text-2xl text-[#ff004f]">•</span>
+                    <h3 class="mx-2 my-0 text-2xl font-semibold whitespace-nowrap">Deep Linking</h3>
+                    <span class="text-2xl text-[#ff004f]">•</span>
+                    <h3 class="mx-2 my-0 text-2xl font-semibold whitespace-nowrap">Trays
+                    </h3>
+                    <span class="text-2xl text-[#ff004f]">•</span>
+                    <h3 class="mx-2 my-0 text-2xl font-semibold whitespace-nowrap">Offline Support </h3>
+                    <span class="text-2xl text-[#ff004f]">•</span>
+                    <h3 class="mx-2 my-0 text-2xl font-semibold whitespace-nowrap">Code Signing
+                    </h3>
+                    <span class="text-2xl text-[#ff004f]">•</span>
+                    <h3 class="mx-2 my-0 text-2xl font-semibold whitespace-nowrap">Launch at Startup</h3>
+                    <span class="text-2xl text-[#ff004f]">•</span>
+                    <h3 class="mx-2 my-0 text-2xl font-semibold whitespace-nowrap">Screen </h3>
+                    <span class="text-2xl text-[#ff004f]">•</span>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- customers Reviews -->
+
+        <div id="testimonials" class="px-6 py-12 mx-auto max-w-7xl lg:px-8 lg:mt-32">
+
+            <h2 class="text-5xl font-poppins sm:font-semibold mb-14">
+                Customer <span class="text-[#ff004f]">Reviews</span>
+            </h2>
+            
+
+
+            <div class="flex flex-col items-end border rounded-xl lg:flex-row">
+
+                <div id="left" class="flex flex-col gap-12 p-8">
+
+                    <div class="h-4 w-fit">
+                        <img src="./assets/asset 44.svg" alt="">
+                    </div>
+
+
+                    <h3 class="text-xl font-medium leading-relaxed">Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Nisi deleniti sequi at voluptatem incidunt .
+                    </h3>
+
+                    <div id="tag-container" class="flex flex-wrap gap-3">
+
+                        <div class="flex items-center justify-center gap-2 px-3 py-1 text-pink-800 border border-pink-300 rounded-md bg-pink-50 w-fit">
+                            <i class="text-pink-800 fa-solid fa-check"></i>
+                            <span class="font-medium font-poppins">Chromeless UI</span>
+                        </div>
+                    
+                        <div class="flex items-center justify-center gap-2 px-3 py-1 text-pink-800 border border-pink-300 rounded-md bg-pink-50 w-fit">
+                            <i class="text-pink-800 fa-solid fa-check"></i>
+                            <span class="font-medium font-poppins">Chromeless UI</span>
+                        </div>
+                    
+                        <div class="flex items-center justify-center gap-2 px-3 py-1 text-pink-800 border border-pink-300 rounded-md bg-pink-50 w-fit">
+                            <i class="text-pink-800 fa-solid fa-check"></i>
+                            <span class="font-medium font-poppins">Chromeless UI</span>
+                        </div>
+                    
+                        <div class="flex items-center justify-center gap-2 px-3 py-1 text-pink-800 border border-pink-300 rounded-md bg-pink-50 w-fit">
+                            <i class="text-pink-800 fa-solid fa-check"></i>
+                            <span class="font-medium font-poppins">Chromeless UI</span>
+                        </div>
+                    
+                        <div class="flex items-center justify-center gap-2 px-3 py-1 text-pink-800 border border-pink-300 rounded-md bg-pink-50 w-fit">
+                            <i class="text-pink-800 fa-solid fa-check"></i>
+                            <span class="font-medium font-poppins">Chromeless UI</span>
+                        </div>
+                    
+                    </div>
+                    
+
+                    <p class="text-lg font-light text-gray-500">Lorem ipsum, dolor sit <span class="text-gray-900"> amet
+                            consectetur adipisicing</span> elit. Ad laboriosam aliquid minus. Soluta nulla veniam,
+                        animi, vitae odio ex inventore tenetur laboriosam voluptatum at quasi. Natus facilis <span
+                            class="text-gray-900">quaerat consectetur velit numquam</span> voluptatibus sint perferendis
+                        nesciunt</p>
+
+
+                    <div id="user-card" class="flex gap-4">
+                        <div class="w-12 ">
+                            <img class="rounded-full" src="./assets/mine11.png" alt="">
+
+
+                        </div>
+
+                        <div class="flex flex-col">
+                            <h3 class="text-gray-700">Rayq me</h3>
+                            <p class="text-gray-500">Founder & CEO, <a
+                                    class="transition-all duration-500 hover:underline" href="">ClickUp</a></p>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <div id="right" class="">
+
+
+                    <img class="pl-12 secondth" src="./assets/Manage work together-1.png" alt="">
+
+                </div>
+
+            </div>
+
+
+            <div class="flex flex-col justify-between gap-4 mt-8 lg:flex-row">
+                <div
+                    class="rounded-2xl  p-[1px] bg-slate-200 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200 ">
+                    <div
+                        class="flex flex-col flex-1 gap-6 p-6 rounded-2xl bg-slate-50 hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 hover:to-yellow-50">
+                        <div class="flex flex-col gap-4 lg:items-start">
+                            <div class="flex items-center justify-center w-12 h-12 bg-pink-200 rounded-full" style="background-color: #f8bbd0;">
+                                <i class="text-pink-800 fa-solid fa-link"></i>
+                            </div>
+                        
+                            <h3 class="text-2xl font-semibold ">Native APIs</h3>
+                        </div>
+                        
+                        <p class="text-lg font-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio
+                            inventore dignissimos velit sint, corrupti explicabo tempore aperiam neque commodi dicta at
+                            nesciunt soluta! Natus pariatur voluptate odio minima ad inventore laborum accusantium.
+                            Illo, nostrum maxime.</p>
+                        <div class="flex gap-4">
+                            <div class="flex">
+                                <div
+                                    class="flex items-center justify-center w-12 h-12 -mr-3 overflow-hidden border border-white rounded-full">
+                                    <img src="./assets/11.svg" class="min-w-16 min-h-16" alt="">
+                                </div>
+                                <div class="relative w-12 h-12 overflow-hidden border border-white rounded-full">
+                                    <img src="./assets/photo_2023-04-10_10-54-27.jpg" alt="" class="zoom-image">
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="flex flex-col">
+                                <h3>Roman Reigns</h3>
+                                <a href="#" class="text-gray-500 anchor-hover w-fit">Rise</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div
+                    class="rounded-2xl p-[1px] bg-slate-200 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200 ">
+                    <div
+                        class="flex flex-col flex-1 gap-6 p-6 rounded-2xl bg-slate-50 hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 hover:to-yellow-50">
+                          <div class="flex flex-col gap-4 lg:items-start">
+                            <div class="flex items-center justify-center w-12 h-12 bg-pink-200 rounded-full" style="background-color: #f8bbd0;">
+                                <i class="text-pink-800 fa-brands fa-uikit"></i>
+                            </div>
+                        
+                            <h3 class="text-2xl font-semibold ">Cleaner, less cluttered UI</h3>
+                        </div>
+                        <p class="text-lg font-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio
+                            inventore dignissimos velit sint, corrupti explicabo tempore aperiam neque commodi dicta at
+                            nesciunt soluta! Natus pariatur voluptate odio minima ad inventore laborum accusantium.
+                            Illo, nostrum maxime.</p>
+                        <div class="flex gap-4">
+                            <div class="flex">
+                                <div
+                                    class="flex items-center justify-center w-12 h-12 -mr-3 overflow-hidden border border-white rounded-full">
+                                    <img src="./assets/11.svg" class="min-w-16 min-h-16" alt="">
+                                </div>
+                                <div class="relative w-12 h-12 overflow-hidden border border-white rounded-full">
+                                    <img src="./assets/photo_2023-04-10_10-54-27.jpg" alt="" class="zoom-image">
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <h3>Roman Reigns</h3>
+                                <a href="#" class="text-gray-500 anchor-hover w-fit">Rise</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div
+                    class="rounded-2xl  p-[1px] bg-slate-200 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200 ">
+                    <div
+                        class="flex flex-col flex-1 gap-6 p-6 rounded-2xl bg-slate-50 hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 hover:to-yellow-50">
+                        <div class="flex flex-col gap-4 lg:items-start">
+                            <div class="flex items-center justify-center w-12 h-12 bg-pink-200 rounded-full" style="background-color: #f8bbd0;">
+                                <i class="text-lg font-semibold text-pink-800 fa-solid fa-code"></i>
+                            </div>
+                        
+                            <h3 class="text-2xl font-semibold ">Code optional</h3>
+                        </div>
+                        
+                        <p class="text-lg font-light ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio
+                            inventore dignissimos velit sint, corrupti explicabo tempore aperiam neque commodi dicta at
+                            nesciunt soluta! Natus pariatur voluptate odio minima ad inventore laborum accusantium.
+                            Illo, nostrum maxime.</p>
+                        <div class="flex gap-4">
+                            <div class="flex">
+                                <div
+                                    class="flex items-center justify-center w-12 h-12 -mr-3 overflow-hidden border border-white rounded-full">
+                                    <img src="./assets/11.svg" class="min-w-16 min-h-16" alt="">
+                                </div>
+                                <div class="relative w-12 h-12 overflow-hidden border border-white rounded-full">
+                                    <img src="./assets/photo_2023-04-10_10-54-27.jpg" alt="" class="zoom-image">
+                                </div>
+                                
+                            </div>
+                            <div class="flex flex-col">
+                                <h3>Roman Reigns</h3>
+                                <a href="#" class="text-gray-500 anchor-hover w-fit">Rise</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- after div -->
+
+
+            <div class="flex flex-col mt-20 bg-black lg:pt-10 rounded-3xl lg:flex-row">
+
+                <div id="left" class="flex flex-col gap-4 p-8 lg:flex-1 lg:gap-7">
+
+                    <span class="text-xl font-semibold text-gray-500 ">READY TO START BUILDING?</span>
+
+
+                    <h3 class="text-4xl font-bold leading-snug text-white lg:text-5xl">Create your desktop app for free*
+                    </h3>
+
+
+
+                    <p class="my-5 text-lg font-light lg:text-xl" style="color: #bdbec3;">Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit. Maiores delectus nihil ipsa, expedita voluptatibus aperiam
+                        voluptates eius voluptatum labore? Cupiditate!
+                    </p>
+
+
+                    <button
+                        class="flex items-center justify-center gap-4 py-3 text-white rounded-lg hover:bg-opacity-90 bg-[#ff004f]">
+                        <i class=" fa-solid fa-download"></i><span>
+                            Download for free
+                        </span></button>
+
+                    <p class="text-xs italic leading-tight text-gray-400 ">*Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Sapiente vero suscipit corporis doloribus ullam nam assumenda voluptate nihil!
+                        .</p>
+                </div>
+
+
+                <div id="right" class=" lg:w-1/2">
+
+                    <img class=" rounded-3xl pt-9 pl-13" src="./assets/assets-67.png" alt="">
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- pricing -->
+
+
+        <div id="pricing" class="px-6 py-12 mx-auto max-w-7xl lg:px-8 lg:mt-32">
+
+
+            <h2 class="max-w-2xl text-5xl leading-snug sm:font-semibold">
+                Choose a plan that <span class="text-[#ff004f]">fits your needs</span>
+            </h2>
+            
+
+            <div class="flex flex-col gap-6 mt-6 lg:flex-row">
+
+                <div
+                    class="flex flex-col flex-1 gap-6 px-8 pt-12 pb-8 border rounded-xl lg:border-none lg:bg-slate-100">
+
+                    <h3 class="text-4xl ">Free</h3>
+                    <p class="text-lg font-light">For personal use or testing your app before deploying to customers.
+                    </p>
+
+                    <p class="uppercase">key features</p>
+
+
+                    <ul class="flex-grow space-y-3">
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-check"></i>
+
+                            <span class="text-lg font-light text-gray-800">Free for personal use</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-check"></i>
+
+                            <span class="text-lg font-light text-gray-800">Free for personal use</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-xmark"></i>
+
+                            <span class="text-lg font-light text-gray-800">Free for personal use</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-xmark"></i>
+
+                            <span class="text-lg font-light text-gray-800">Free for personal use</span>
+                        </li>
+                    </ul>
+
+                    <button class="px-8 py-3 font-medium border rounded-lg text-[#ff004f] bg-transparent hover:bg-[#ff004f] hover:text-white font-poppins transition-all duration-300 ease-in-out">
+                        Read Docs
+                    </button>
+                    
+
+                </div>
+                <div
+                    class="flex flex-col flex-1 gap-6 px-8 pt-12 pb-8 border rounded-xl lg:border-none lg:bg-slate-100">
+
+                    <h3 class="text-4xl ">Essential</h3>
+                    <p class="text-lg font-light">For simple desktop apps.</p>
+
+                    <p class="text-lg font-light"><span class="text-2xl font-semibold">$99</span> /month</p>
+
+                    <p class="text-lg font-light uppercase">key features</p>
+
+
+
+
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-check"></i>
+
+                            <span class="text-lg font-light text-gray-800">Free for personal use</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-check"></i>
+
+                            <span class="text-lg font-light text-gray-800">Free for personal use</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-xmark"></i>
+
+                            <span class="text-lg font-light text-gray-800">Free for personal use</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-xmark"></i>
+
+                            <span class="text-lg font-light text-gray-800">Free for personal use</span>
+                        </li>
+                    </ul>
+
+                    <button
+                        class="px-8 py-3 font-medium text-white rounded-lg hover:bg-opacity-90 font-poppins bg-[#ff004f] ">Read
+                        Docs</button>
+
+                </div>
+                <div
+                    class="relative flex flex-col flex-1 gap-6 px-8 pt-12 pb-8 border rounded-xl lg:border-none lg:bg-slate-100">
+
+                    <p
+                        class="absolute top-0 px-4 py-2 text-sm font-semibold text-[#ff004f] -translate-y-1/2  border rounded-full right-3 font-poppins w-fit">
+                        Most Popular</p>
+
+                    <h3 class="text-4xl ">Professional</h3>
+                    <p class="text-lg font-light">For sophisticated desktop apps.
+                    </p>
+
+
+
+                    <p class="text-lg font-light"><span class="text-2xl font-semibold">$99</span> /month</p>
+
+                    <p class="uppercase">key features</p>
+
+
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-check"></i>
+
+                            <span class="text-lg font-light text-gray-800">Free for personal use</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-check"></i>
+
+                            <span class="text-lg font-light text-gray-800">Free for personal use</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-xmark"></i>
+
+                            <span class="text-lg font-light text-gray-800">Free for personal use</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="text-gray-500 fa-solid fa-xmark"></i>
+
+                            <span class="text-lg font-light text-gray-800">Free for personal use</span>
+                        </li>
+                    </ul>
+
+                    <button
+                        class="px-8 py-3 font-medium text-white rounded-lg hover:bg-opacity-90 font-poppins bg-[#ff004f] ">Read
+                        Docs</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- faqs -->
+
+        <div id="faq" class="px-6 py-12 mx-auto max-w-7xl lg:px-8 lg:mt-30">
+
+            <h2 class="max-w-2xl text-5xl leading-snug sm:font-semibold">
+                FA<span class="text-[#ff004f]">Qs</span> 
+            </h2>
+            
+
+            <div class="grid items-start grid-cols-1 gap-6 mt-6 lg:grid-cols-2">
+
+                <div class="p-6 border border-gray-200 group rounded-xl bg-gray-50">
+                    <dt class="flex items-center justify-between cursor-pointer" aria-controls="faq1">
+                        <p class="text-lg font-semibold text-gray-700">How should I use this?</p>
+                        <i class="transition-transform -rotate-180 fa-solid fa-chevron-up text-[#ff004f]"></i>
+                    </dt>
+                
+                    <dd id="faq1" class="hidden mt-6 text-lg font-light transition">
+                        <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis nostrum cum doloribus ea quasi fuga? Unde et maxime ratione dolore.</p>
+                    </dd>
+                </div>
+                
+                <div class="p-6 border border-gray-200 group rounded-xl bg-gray-50">
+
+                    <dt class="flex items-center justify-between cursor-pointer" aria-controls="faq2">
+                        <p class="text-lg font-semibold text-gray-700 ">Do i have to pay for something?</p>
+                        <i class="text-[#ff004f] transition-transform -rotate-180 fa-solid fa-chevron-up"></i>
+                    </dt>
+
+                    <dd id="faq2" class="hidden mt-6 text-lg font-light">
+                        <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis nostrum
+                            cum doloribus ea quasi fuga? Unde et maxime ratione dolore.</p>
+                    </dd>
+
+                </div>
+                <div class="p-6 border border-gray-200 group rounded-xl bg-gray-50">
+
+                    <dt class="flex items-center justify-between cursor-pointer" aria-controls="faq3">
+                        <p class="text-lg font-semibold text-gray-700 ">How it works?</p>
+                        <i class="text-[#ff004f] transition-transform -rotate-180 fa-solid fa-chevron-up"></i>
+                    </dt>
+
+                    <dd id="faq3" class="hidden mt-6 text-lg font-light">
+                        <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis nostrum
+                            cum doloribus ea quasi fuga? Unde et maxime ratione dolore.</p>
+                    </dd>
+
+                </div>
+                <div class="p-6 border border-gray-200 group rounded-xl bg-gray-50">
+
+                    <dt class="flex items-center justify-between cursor-pointer" aria-controls="faq4">
+                        <p class="text-lg font-semibold text-gray-700 ">How should i use this?</p>
+                        <i class="text-[#ff004f] transition-transform -rotate-180 fa-solid fa-chevron-up"></i>
+                    </dt>
+
+                    <dd id="faq4" class="hidden mt-6 text-lg font-light transition">
+                        <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis nostrum
+                            cum doloribus ea quasi fuga? Unde et maxime ratione dolore.</p>
+                    </dd>
+
+                </div>
+                <div class="p-6 border border-gray-200 group rounded-xl bg-gray-50">
+
+                    <dt class="flex items-center justify-between cursor-pointer" aria-controls="faq5">
+                        <p class="text-lg font-semibold text-gray-700 ">Do i have to pay for something?</p>
+                        <i class="text-[#ff004f] transition-transform -rotate-180 fa-solid fa-chevron-up"></i>
+                    </dt>
+
+                    <dd id="faq5" class="hidden mt-6 text-lg font-light">
+                        <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis nostrum
+                            cum doloribus ea quasi fuga? Unde et maxime ratione dolore.</p>
+                    </dd>
+
+                </div>
+                <div class="p-6 border border-gray-200 group rounded-xl bg-gray-50">
+
+                    <dt class="flex items-center justify-between cursor-pointer" aria-controls="faq6">
+                        <p class="text-lg font-semibold text-gray-700 ">How it works?</p>
+                        <i class="text-[#ff004f] transition-transform -rotate-180 fa-solid fa-chevron-up"></i>
+                    </dt>
+
+                    <dd id="faq6" class="hidden mt-6 text-lg font-light">
+                        <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis nostrum
+                            cum doloribus ea quasi fuga? Unde et maxime ratione dolore.</p>
+                    </dd>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+    </main>
+
+
+    <!-- footer  -->
+
+    <footer class="px-6 py-12 mx-auto max-w-7xl lg:px-8 lg:mt-10">
+
+        <div
+            class="flex flex-col items-center gap-8 px-8 py-12 bg-gray-100 border rounded-lg lg:flex-row-reverse lg:border-none ">
+
+            <a href="" class="text-sm text-gray-500">Documentation</a>
+
+            <div class="flex gap-8 text-lg ">
+                <a class="text-gray-600 hover:text-gray-900 font-poppins" href=""><i
+                        class="fa-brands fa-twitter hover:text-[#ff004f] transition ease-in-out duration-150"></i></a>
+
+
+                <a class="text-gray-600 hover:text-gray-900 font-poppins" href=""><i
+                        class="fa-brands fa-github hover:text-[#ff004f] transition ease-in-out duration-150"></i></a>
+
+
+            </div>
+
+            <a href="" id="brand" class="flex items-center flex-1 gap-2">
+                <img src="./assets/asset 0.png" alt="" class="object-cover max-w-12 max-h-12">
+                <span class="text-xl font-semibold font-poppins">Quantum</span>
+            </a>
+
+
+
+        </div>
+
+
+        <div id="sub-footer" class="flex flex-col items-center gap-6 my-12">
+            <div class="flex items-center gap-2">
+                <img class="w-4 h-4" src="./assets/asset 54.svg" alt="">
+
+                <p class="text-sm text-gray-600">FZ Frozed company.</p>
+            </div>
+
+            <p class="text-sm text-gray-400">© 2024 Quantum, Inc. All rights reserved.</p>
+
+
+        </div>
+
+    </footer>
+
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
